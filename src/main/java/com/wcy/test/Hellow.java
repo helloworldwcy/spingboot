@@ -45,5 +45,10 @@ public class Hellow {
         System.out.println("hellow4");
         return "hellow4:"+ name;
     }
+    @ResponseBody
+    @RequestMapping("{name}/{id}")
+    public String hellow5(@PathVariable String name){
+        return "hellow5:"+ name;
+    }
 }
 
