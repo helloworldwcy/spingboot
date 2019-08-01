@@ -28,5 +28,11 @@ public class Hellow {
     public String hellow2(@PathParam(value="name") String name){
         return "hellow2:"+ name;
     }
+    
+    @ResponseBody
+    @RequestMapping("hellow3")
+    public String hellow3(@PathParam(value="name") String name){
+        return "hellow3:"+ name;
+    }
 }
 
