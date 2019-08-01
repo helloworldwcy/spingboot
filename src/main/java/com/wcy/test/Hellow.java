@@ -1,7 +1,10 @@
 
 package com.wcy.test;
 
+import javax.websocket.server.PathParam;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -18,6 +21,12 @@ public class Hellow {
     @RequestMapping("hellow")
     public String hellow(){
         return "hellow";
+    }
+    
+    @ResponseBody
+    @RequestMapping("hellow2")
+    public String hellow2(@PathParam(value="name") String name){
+        return "hellow2:"+ name;
     }
 }
 
