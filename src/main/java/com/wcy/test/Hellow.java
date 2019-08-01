@@ -42,6 +42,7 @@ public class Hellow {
     @RequestMapping("{name}")
     public String hellow4(@PathVariable String name){
         System.out.println("hellow4");
+        System.out.println("hellow4");
         return "hellow4:"+ name;
     }
 }
