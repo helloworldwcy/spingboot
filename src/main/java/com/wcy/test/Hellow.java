@@ -41,5 +41,11 @@ public class Hellow {
         System.out.println("hellow5");
         return "hellow5:"+ name;
     }
+
+    @RequestMapping("hellow3")
+    public String hellow3(@PathParam(value="name") String name){
+        System.out.println("hello3");
+        return "hellow3:"+ name;
+    }
 }
 
