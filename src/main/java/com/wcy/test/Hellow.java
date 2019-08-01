@@ -31,14 +31,6 @@ public class Hellow {
     }
     
     @ResponseBody
-    @RequestMapping("hellow3")
-    public String hellow3(@PathParam(value="name") String name){
-        
-        System.out.println("hellow3");
-        return "hellow3:"+ name;
-    }
-    
-    @ResponseBody
     @RequestMapping("{name}")
     public String hellow4(@PathVariable String name){
         System.out.println("hellow4");
@@ -48,6 +40,7 @@ public class Hellow {
     @ResponseBody
     @RequestMapping("{name}/{id}")
     public String hellow5(@PathVariable String name){
+        System.out.println("hellow5");
         return "hellow5:"+ name;
     }
 }
