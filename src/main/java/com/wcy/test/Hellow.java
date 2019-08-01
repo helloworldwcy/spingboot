@@ -5,6 +5,7 @@ import javax.websocket.server.PathParam;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -32,7 +33,15 @@ public class Hellow {
     @ResponseBody
     @RequestMapping("hellow3")
     public String hellow3(@PathParam(value="name") String name){
+        
+        System.out.println("hellow3");
         return "hellow3:"+ name;
+    }
+    
+    @ResponseBody
+    @RequestMapping("{name}")
+    public String hellow4(@PathVariable String name){
+        return "hellow4:"+ name;
     }
 }
 
