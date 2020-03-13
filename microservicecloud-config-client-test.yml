@@ -11,4 +11,4 @@ eureka:
       
 spring:
   application:
-    name: microservicecloud-config-client10
+    name: microservicecloud-config-client1
